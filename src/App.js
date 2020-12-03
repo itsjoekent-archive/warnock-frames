@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Landing from './Landing';
 import Upload from './Upload';
 import Framer from './Framer';
+import Share from './Share';
 import Switch from './Switch';
 import {
   LANDING_STEP,
@@ -133,6 +134,12 @@ function App() {
               setNextStep={setNextStep}
               frame={frame}
               setFrame={setFrame}
+            />
+            <Share
+              targetStep={SHARE_STEP}
+              setNextStep={setNextStep}
+              profilePhoto={profilePhoto}
+              frame={frame}
             />
           </Switch>
         </Contents>

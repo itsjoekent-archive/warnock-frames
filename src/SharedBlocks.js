@@ -61,3 +61,21 @@ export const SecondaryCtaButton = styled.button`
     background-color: var(--dark-moderate-blue);
   }
 `;
+
+export const TertiaryButton = styled.button`
+  display: block;
+  font-family: var(--sans-serif);
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--white);
+  border: none;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    background-color: var(--dark-moderate-blue);
+  }
+`;

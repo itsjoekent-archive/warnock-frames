@@ -25,7 +25,11 @@ const Container = styled.section`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
+  margin-left: 12px;
+
+  @media (min-width: 768px) {
+    margin-left: 24px;
+  }
 `;
 
 const Bubble = styled.div`

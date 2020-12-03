@@ -1,9 +1,13 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import StepLayout from './StepLayout';
-import { CtaButton } from './SharedBlocks';
+import { CtaButton, TertiaryButton } from './SharedBlocks';
 import frames from './frames';
-import { SHARE_STEP } from './stepTypes';
+import { SHARE_STEP, UPLOAD_STEP } from './stepTypes';
+
+const NextButton = styled(CtaButton)`
+  margin-bottom: 24px;
+`;
 
 const Gallery = styled.div`
   display: flex;
@@ -12,6 +16,14 @@ const Gallery = styled.div`
   justify-content: space-between;
 
   margin-bottom: 24px;
+`;
+
+const ItemLabel = styled.p`
+  font-family: var(--sans-serif);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--moderate-blue);
 `;
 
 const ItemContainer = styled.button`
@@ -28,15 +40,25 @@ const ItemContainer = styled.button`
 
   background-color: var(--white);
   border-radius: 4px;
-  border: 2px solid var(--white);
+  border: none;
   box-shadow: none;
 
+  cursor: pointer;
+
   &:hover {
-    background-color: var(--light-gray);
+    background-color: var(--moderate-blue);
+
+    ${ItemLabel} {
+      color: var(--white);
+    }
   }
 
   ${({ isHighlighted }) => isHighlighted && css`
-    border: 4px solid var(--moderate-blue);
+    background-color: var(--moderate-blue);
+
+    ${ItemLabel} {
+      color: var(--white);
+    }
   `}
 
   img {
@@ -50,14 +72,6 @@ const ItemContainer = styled.button`
     margin-left: 12px;
     margin-right: 12px;
   }
-`;
-
-const ItemLabel = styled.p`
-  font-family: var(--sans-serif);
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 1.4;
-  color: var(--moderate-blue);
 `;
 
 export default function Framer(props) {
@@ -84,9 +98,12 @@ export default function Framer(props) {
       </Gallery>
       {!!frame && (
         <div>
-          <CtaButton onClick={() => setNextStep(SHARE_STEP)}>
+          <NextButton onClick={() => setNextStep(SHARE_STEP)}>
             Next
-          </CtaButton>
+          </NextButton>
+          <TertiaryButton onClick={() => setNextStep(UPLOAD_STEP)}>
+            ⟵ Go back
+          </TertiaryButton>
         </div>
       )}
     </StepLayout>
