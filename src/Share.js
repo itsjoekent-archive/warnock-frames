@@ -26,7 +26,7 @@ export default function Share(props) {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    const [src, title, color, squareSrc] = frames.find(([src]) => src === frame);
+    const [src, title, color, squareSrc] = frames.find(([src]) => src === frame); // eslint-disable-line
 
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -55,7 +55,7 @@ export default function Share(props) {
       subHeader="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     >
       <InnerLayout>
-        <img src={dataUri} width="256" height="256" />
+        <img alt="Your custom profile frame" src={dataUri} width="256" height="256" />
         <canvas ref={canvasRef} width="512" height="512" style={{ display: 'none' }} />
         <CtaButton as="a" href={dataUri} download>Download</CtaButton>
         <TertiaryButton onClick={() => setNextStep(FRAME_STEP)}>⟵ Go back</TertiaryButton>

@@ -72,7 +72,7 @@ export default function Upload(props) {
     >
       <InnerLayout>
         <UploadContainer>
-          <img src={profilePhoto || defaultProfile} width="112px" height="112px" />
+          <img alt="Upload preview" src={profilePhoto || defaultProfile} width="112px" height="112px" />
           <SecondaryCtaButton onClick={() => fileRef.current.click()}>
             Upload
           </SecondaryCtaButton>
