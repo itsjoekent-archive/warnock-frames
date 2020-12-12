@@ -100,7 +100,7 @@ export default function Landing(props) {
         Make your own Warnock profile frame
       </Header>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+        Show off your #TeamWarnock Pride! Upload your profile picture here and use our simple tool to make your own Team Warnock profile frame.
       </Paragraph>
       <CtaRow>
         <CtaButton onClick={() => setNextStep(UPLOAD_STEP)}>Get Started</CtaButton>

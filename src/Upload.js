@@ -68,7 +68,7 @@ export default function Upload(props) {
     <StepLayout
       stepNumber="1"
       header="Upload your profile photo"
-      subHeader="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      subHeader="We recommend uploading a square photo."
     >
       <InnerLayout>
         <UploadContainer>

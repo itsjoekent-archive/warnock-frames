@@ -1,32 +1,39 @@
-import aka from './assets/frames/alpha-kappa-alpha.png';
-import akaFilled from './assets/frames/alpha-kappa-alpha-filled.png';
-import apa from './assets/frames/alpha-phi-alpha.png';
-import apaFilled from './assets/frames/alpha-phi-alpha-filled.png';
-import dst from './assets/frames/delta-sigma-theta.png';
-import dstFilled from './assets/frames/delta-sigma-theta-filled.png';
-import ipt from './assets/frames/iota-phi-theta.png';
-import iptFilled from './assets/frames/iota-phi-theta-filled.png';
-import kap from './assets/frames/kappa-alpha-psi.png';
-import kapFilled from './assets/frames/kappa-alpha-psi-filled.png';
-import opp from './assets/frames/omega-psi-phi.png';
-import oppFilled from './assets/frames/omega-psi-phi-filled.png';
-import pbs from './assets/frames/phi-beta-sigma.png';
-import pbsFilled from './assets/frames/phi-beta-sigma-filled.png';
-import sgr from './assets/frames/sigma-gamma-rho.png';
-import sgrFilled from './assets/frames/sigma-gamma-rho-filled.png';
-import zpb from './assets/frames/zeta-phi-beta.png';
-import zpbFilled from './assets/frames/zeta-phi-beta-filled.png';
+import asian from './assets/frames/asian.png';
+import divine1906 from './assets/frames/divine-1906.png';
+import divine1908 from './assets/frames/divine-1908.png';
+import divine1911 from './assets/frames/divine-1911.png';
+import divine1911Purple from './assets/frames/divine-1911-purple.png';
+import divine1913 from './assets/frames/divine-1913.png';
+import divine1914 from './assets/frames/divine-1914.png';
+import divine1920 from './assets/frames/divine-1920.png';
+import divine1922 from './assets/frames/divine-1922.png';
+import divine1963 from './assets/frames/divine-1963.png';
+import latino from './assets/frames/latino.png';
+import faith from './assets/frames/faith.png';
+import lgbtq from './assets/frames/lgbtq.png';
+import students from './assets/frames/students.png';
+import veterans from './assets/frames/veterans.png';
+import vote from './assets/frames/vote.png';
+import women from './assets/frames/women.png';
 
 const frames = [
-  [aka, 'Alpha Kappa Alpha For Warnock', '#DF8A91', akaFilled],
-  [apa, 'Alpha Phi Alpha For Warnock', '#000000', apaFilled],
-  [dst, 'Delta Sigma Theta For Warnock', '#C4351F', dstFilled],
-  [ipt, 'Iota Phi Theta For Warnock', '#F5CE46', iptFilled],
-  [kap, 'Kappa Alpha Psi For Warnock', '#8C2212', kapFilled],
-  [opp, 'Omega Psi Phi For Warnock', '#471E6F', oppFilled],
-  [pbs, 'Phi Beta Sigma For Warnock', '#24549E', pbsFilled],
-  [sgr, 'Sigma Gamma Rho For Warnock', '#1D40CB', sgrFilled],
-  [zpb, 'Zeta Phi Beta For Warnock', '#1B1D9D', zpbFilled],
+  [asian, 'Asian Americans For Warnock', '#6690C2'],
+  [divine1906, 'Divine 9 For Warnock (1906)', '#000000'],
+  [divine1908, 'Divine 9 For Warnock (1908)', '#000000'],
+  [divine1911, 'Divine 9 For Warnock (1911)', '#000000'],
+  [divine1911Purple, 'Divine 9 For Warnock (1911)', '#000000'],
+  [divine1913, 'Divine 9 For Warnock (1913)', '#000000'],
+  [divine1914, 'Divine 9 For Warnock (1914)', '#000000'],
+  [divine1920, 'Divine 9 For Warnock (1920)', '#000000'],
+  [divine1922, 'Divine 9 For Warnock (1922)', '#000000'],
+  [divine1963, 'Divine 9 For Warnock (1963)', '#000000'],
+  [faith, 'Faith For Warnock', '#6690C2'],
+  [latino, 'Latinos For Warnock', '#6690C2'],
+  [lgbtq, 'LGBTQ For Warnock', '#000000'],
+  [students, 'Students For Warnock', '#6690C2'],
+  [veterans, 'Veterans For Warnock', '#6690C2'],
+  [vote, 'Vote Warnock', '#6690C2'],
+  [women, 'Women For Warnock', '#6690C2'],
 ];
 
 export default frames;

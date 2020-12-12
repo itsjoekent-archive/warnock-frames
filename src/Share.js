@@ -26,7 +26,7 @@ export default function Share(props) {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    const [src, title, color, squareSrc] = frames.find(([src]) => src === frame); // eslint-disable-line
+    const [src, title, color] = frames.find(([src]) => src === frame); // eslint-disable-line
 
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -42,7 +42,7 @@ export default function Share(props) {
         setDataUri(canvas.toDataURL());
       };
 
-      frameImage.src = squareSrc;
+      frameImage.src = src;
     };
 
     profileImage.src = profilePhoto;
@@ -52,7 +52,7 @@ export default function Share(props) {
     <StepLayout
       stepNumber="3"
       header="Download & share!"
-      subHeader="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      subHeader="Thanks for being a part of #TeamWarnock! Download your custom profile picture, and then upload it to Facebook, Twitter, Instagram, or wherever you hang out online!"
     >
       <InnerLayout>
         <img alt="Your custom profile frame" src={dataUri} width="256" height="256" />
