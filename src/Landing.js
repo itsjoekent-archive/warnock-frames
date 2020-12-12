@@ -73,6 +73,7 @@ const Frame = styled.img`
   display: block;
   width: 48px;
   height: 48px;
+  border-radius: 50%;
   margin-left: -24px;
 
   opacity: 0;
