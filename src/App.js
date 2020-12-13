@@ -5,12 +5,14 @@ import Logo from './Logo';
 import Footer from './Footer';
 import Landing from './Landing';
 import Upload from './Upload';
+import Cropper from './Cropper';
 import Framer from './Framer';
 import Share from './Share';
 import Switch from './Switch';
 import {
   LANDING_STEP,
   UPLOAD_STEP,
+  CROP_STEP,
   FRAME_STEP,
   SHARE_STEP,
 } from './stepTypes';
@@ -93,6 +95,7 @@ function App() {
   const [nextStep, setNextStep] = React.useState(null);
 
   const [profilePhoto, setProfilePhoto] = React.useState(null);
+  const [crop, setCrop] = React.useState({ unit: 'px', aspect: 1 / 1 }); console.log(crop);
   const [frame, setFrame] = React.useState(null);
 
   React.useEffect(() => {
@@ -129,6 +132,13 @@ function App() {
               profilePhoto={profilePhoto}
               setProfilePhoto={setProfilePhoto}
             />
+            <Cropper
+              targetStep={CROP_STEP}
+              setNextStep={setNextStep}
+              profilePhoto={profilePhoto}
+              crop={crop}
+              setCrop={setCrop}
+            />
             <Framer
               targetStep={FRAME_STEP}
               setNextStep={setNextStep}
@@ -139,6 +149,7 @@ function App() {
               targetStep={SHARE_STEP}
               setNextStep={setNextStep}
               profilePhoto={profilePhoto}
+              crop={crop}
               frame={frame}
             />
           </Switch>

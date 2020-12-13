@@ -17,7 +17,7 @@ const InnerLayout = styled.div`
 `;
 
 export default function Share(props) {
-  const { frame, profilePhoto, setNextStep } = props;
+  const { frame, profilePhoto, crop, setNextStep } = props;
 
   const [dataUri, setDataUri] = React.useState(null);
   const canvasRef = React.useRef(null);
@@ -34,7 +34,15 @@ export default function Share(props) {
     const profileImage = new Image();
 
     profileImage.onload = () => {
-      ctx.drawImage(profileImage, 0, 0, profileImage.width, profileImage.height, 0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        profileImage,
+        (crop.x / 100) * profileImage.width,
+        (crop.y / 100) * profileImage.height,
+        (crop.width / 100) * profileImage.width,
+        (crop.height / 100) * profileImage.height,
+        0, 0,
+        canvas.width, canvas.height,
+      );
 
       const frameImage = new Image();
       frameImage.onload = () => {
@@ -46,11 +54,11 @@ export default function Share(props) {
     };
 
     profileImage.src = profilePhoto;
-  }, [frame, profilePhoto, setDataUri]);
+  }, [frame, profilePhoto, crop, setDataUri]);
 
   return (
     <StepLayout
-      stepNumber="3"
+      stepNumber="4"
       header="Download & share!"
       subHeader="Thanks for being a part of #TeamWarnock! Download your custom profile picture, and then upload it to Facebook, Twitter, Instagram, or wherever you hang out online!"
     >

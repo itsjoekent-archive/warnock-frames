@@ -17,7 +17,14 @@ import vote from './assets/frames/vote.png';
 import women from './assets/frames/women.png';
 
 const frames = [
+  [vote, 'Vote Warnock', '#6690C2'],
   [asian, 'Asian Americans For Warnock', '#6690C2'],
+  [faith, 'Faith For Warnock', '#6690C2'],
+  [latino, 'Latinos For Warnock', '#6690C2'],
+  [lgbtq, 'LGBTQ For Warnock', '#000000'],
+  [students, 'Students For Warnock', '#6690C2'],
+  [veterans, 'Veterans For Warnock', '#6690C2'],
+  [women, 'Women For Warnock', '#6690C2'],
   [divine1906, 'Divine 9 For Warnock (1906)', '#000000'],
   [divine1908, 'Divine 9 For Warnock (1908)', '#000000'],
   [divine1911, 'Divine 9 For Warnock (1911)', '#000000'],
@@ -27,13 +34,6 @@ const frames = [
   [divine1920, 'Divine 9 For Warnock (1920)', '#000000'],
   [divine1922, 'Divine 9 For Warnock (1922)', '#000000'],
   [divine1963, 'Divine 9 For Warnock (1963)', '#000000'],
-  [faith, 'Faith For Warnock', '#6690C2'],
-  [latino, 'Latinos For Warnock', '#6690C2'],
-  [lgbtq, 'LGBTQ For Warnock', '#000000'],
-  [students, 'Students For Warnock', '#6690C2'],
-  [veterans, 'Veterans For Warnock', '#6690C2'],
-  [vote, 'Vote Warnock', '#6690C2'],
-  [women, 'Women For Warnock', '#6690C2'],
 ];
 
 export default frames;

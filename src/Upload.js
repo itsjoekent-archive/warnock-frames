@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import StepLayout from './StepLayout';
 import { CtaButton, SecondaryCtaButton } from './SharedBlocks'
-import { FRAME_STEP } from './stepTypes';
+import { CROP_STEP } from './stepTypes';
 import defaultProfile from './assets/default-profile.png';
 
 const UploadContainer = styled.div`
@@ -17,6 +17,7 @@ const UploadContainer = styled.div`
   border-radius: 4px;
 
   img {
+    object-fit: contain;
     margin-bottom: 12px;
   }
 `;
@@ -78,7 +79,7 @@ export default function Upload(props) {
           </SecondaryCtaButton>
         </UploadContainer>
         {!!profilePhoto && (
-          <CtaButton onClick={() => setNextStep(FRAME_STEP)}>
+          <CtaButton onClick={() => setNextStep(CROP_STEP)}>
             Next
           </CtaButton>
         )}

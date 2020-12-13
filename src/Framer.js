@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import StepLayout from './StepLayout';
 import { CtaButton, TertiaryButton } from './SharedBlocks';
 import frames from './frames';
-import { SHARE_STEP, UPLOAD_STEP } from './stepTypes';
+import { SHARE_STEP, CROP_STEP } from './stepTypes';
 
 const NextButton = styled(CtaButton)`
   margin-bottom: 24px;
@@ -85,7 +85,7 @@ export default function Framer(props) {
 
   return (
     <StepLayout
-      stepNumber="2"
+      stepNumber="3"
       header="Select your frame"
       subHeader="Click the frame you would like to use below to create your custom profile picture!"
     >
@@ -107,7 +107,7 @@ export default function Framer(props) {
           <NextButton onClick={() => setNextStep(SHARE_STEP)} ref={nextButtonRef}>
             Next
           </NextButton>
-          <TertiaryButton onClick={() => setNextStep(UPLOAD_STEP)}>
+          <TertiaryButton onClick={() => setNextStep(CROP_STEP)}>
             ⟵ Go back
           </TertiaryButton>
         </div>
